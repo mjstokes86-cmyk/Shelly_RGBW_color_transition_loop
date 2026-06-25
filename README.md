@@ -4,6 +4,12 @@ A simple Shelly Script for RGBW lights that creates a smooth, slow, continuous c
 
 The script cycles through the full hue range and sends RGB updates to a Shelly RGBW device every 500 ms, producing a gentle rainbow fade effect.
 
+## Script File
+
+Use this file on your Shelly device:
+
+- [`shelly-rgbw-color-loop.js`](shelly-rgbw-color-loop.js)
+
 ## Features
 
 - Smooth HSB-to-RGB color transitions
@@ -35,7 +41,7 @@ By default, the hue increases by `0.5` degrees every `500` ms. A full 360-degree
 1. Open your Shelly device web interface.
 2. Go to the Scripts section.
 3. Create a new script.
-4. Add the RGB loop script.
+4. Copy the contents of [`shelly-rgbw-color-loop.js`](shelly-rgbw-color-loop.js) into the script editor.
 5. Save and enable the script.
 6. Start the script.
 
@@ -114,6 +120,12 @@ let rgb = hsbToRgb(hue, 60, 100);
 ```
 
 This creates softer, less intense colors.
+
+## Safety Notes
+
+- Test at a lower brightness first, especially with high-power LED strips.
+- Make sure your power supply is correctly rated for the LED strip length and load.
+- Stop the script if the controller, wiring, or LEDs become unusually warm.
 
 ## Notes
 
